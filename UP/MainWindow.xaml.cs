@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF_UP_2
+namespace UP
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml

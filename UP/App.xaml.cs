@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WPF_UP_2
+namespace UP
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml

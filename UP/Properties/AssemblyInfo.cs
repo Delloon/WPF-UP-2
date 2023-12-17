@@ -7,12 +7,12 @@ using System.Windows;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набор атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("WPF UP 2")]
+[assembly: AssemblyTitle("UP")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("БИИК СибГУТИ")]
-[assembly: AssemblyProduct("WPF UP 2")]
-[assembly: AssemblyCopyright("Copyright © БИИК СибГУТИ 2023")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("UP")]
+[assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

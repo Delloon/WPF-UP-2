@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPF_UP_2.Properties
+namespace UP.Properties
 {
 
 
