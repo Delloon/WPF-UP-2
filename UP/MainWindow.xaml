@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+        <RowDefinition Height="70"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Background="#F7B787"></Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Background="#F7B787"></Grid>
+        <Grid Grid.Row="2" Grid.Column="0" Background="#F9E8D9"></Grid>
+        <Grid Grid.Row="2" Grid.Column="2" Background="#F9E8D9"></Grid>
+        <Frame NavigationUIVisibility="Hidden" Name="MainFrame" ></Frame>
+        <ListBox Grid.Row="1" Name="List_control" ></ListBox>
     </Grid>
 </Window>
