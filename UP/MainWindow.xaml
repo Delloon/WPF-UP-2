@@ -5,22 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="1000" WindowStartupLocation="CenterScreen">
+        Title="Торговля и точка" Height="600" Width="1024" WindowStartupLocation="CenterScreen" FontFamily="#Montserrat Bold">
     <Grid>
         <Grid.RowDefinitions>
-        <RowDefinition Height="70"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="35"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="130"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Row="0" Grid.Column="0" Background="#F7B787"></Grid>
-        <Grid Grid.Row="0" Grid.Column="1" Background="#F7B787"></Grid>
-        <Grid Grid.Row="2" Grid.Column="0" Background="#F9E8D9"></Grid>
-        <Grid Grid.Row="2" Grid.Column="2" Background="#F9E8D9"></Grid>
-        <Frame NavigationUIVisibility="Hidden" Name="MainFrame" ></Frame>
-        <ListBox Grid.Row="1" Name="List_control" ></ListBox>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#E36414" Offset="0"/>
+                    <GradientStop Color="#B06AB3" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock Text="Торговля и точка" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FB8B24" Offset="0"/>
+                    <GradientStop Color="#5F0F40" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+        </Grid>
+        <ListBox Grid.Row="1" Name="Lst_control" PreviewMouseDoubleClick="Lst_control_PreviewMouseDoubleClick" />
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"/>
+        
     </Grid>
 </Window>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89D0EBDD-44CF-4DF8-8036-627EF9D6C3D0}</ProjectGuid>
+    <ProjectGuid>{B260B952-5661-4C3E-936E-B0527272A8DA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UP</RootNamespace>
-    <AssemblyName>UP</AssemblyName>
+    <RootNamespace>Satisfactory</RootNamespace>
+    <AssemblyName>Satisfactory</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,8 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +65,91 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Agent.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuthStatus.cs" />
+    <Compile Include="EditMaterials.xaml.cs">
+      <DependentUpon>EditMaterials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empty.xaml.cs">
+      <DependentUpon>Empty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryImplementations.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Material.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Materials.xaml.cs">
+      <DependentUpon>Materials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NecessaryMaterials.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PointSale.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PossibleSuppliers.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSales.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProvEdit.xaml.cs">
+      <DependentUpon>ProvEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Provider.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Providers.xaml.cs">
+      <DependentUpon>Providers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Satisfactory.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Satisfactory.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Satisfactory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auth.xaml.cs">
+      <DependentUpon>Auth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrameManager.cs" />
+    <Compile Include="Users.cs">
+      <DependentUpon>Satisfactory.tt</DependentUpon>
+    </Compile>
+    <Page Include="EditMaterials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Empty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +162,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Auth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Materials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProvEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Providers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -86,13 +197,38 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <EntityDeploy Include="Models.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Models.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models.edmx.diagram">
+      <DependentUpon>Models.edmx</DependentUpon>
+    </None>
+    <Resource Include="Resources\Montserrat-Bold.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\noPhoto.png" />
+    <Content Include="Satisfactory.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Models.edmx</DependentUpon>
+      <LastGenOutput>Satisfactory.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Satisfactory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Models.edmx</DependentUpon>
+      <LastGenOutput>Satisfactory.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,11 +7,11 @@ using System.Windows;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набор атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("UP")]
+[assembly: AssemblyTitle("Satisfactory")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("UP")]
+[assembly: AssemblyProduct("Satisfactory")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
